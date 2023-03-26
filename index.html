@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title>Weightage Calculator</title>
+    <link rel="icon" href="icon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style1.css">
+    <script src="script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+  </head>
+
+  
+<body>
+  <div class="container">
+    <div class="title">Weightage Calculator</div>
+    <div class="content">
+      <form>
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Number of  Questions</span>
+            <input type="number" id="numQuestions" name="numQuestions" placeholder="Example: 30" required value="none"><br>
+          </div>
+          <div class="input-box">
+            <span class="details">Marks for each question</span>
+            <input type="number" id="marksPerQuestion" name="marksPerQuestion" placeholder="Example: 1" required value="none"><br>
+          </div>
+          <div class="input-box">
+            <span class="details">Negative points for each question</span>
+            <input type="number" id="negativePoints" name="negativePoints" placeholder="Example: 0.25" required value="none"><br>
+          </div>
+          <div class="input-box">
+            <span class="details">Number of questions attempted</span>
+            <input type="number" id="numQuestionsAttempted" name="numQuestionsAttempted" placeholder="Example: 25" required value="none"><br>
+          </div>
+          <div class="input-box">
+            <span class="details">Number of wrong answers</span>
+            <input type="number" id="numWrongAnswers" name="numWrongAnswers" placeholder="Example: 5" required value="none"><br>
+          </div>
+          <div class="input-box">
+            <span class="details">Weightage Marks</span>
+            <input type="number" name="weightageMarks" id="weightageMarks" placeholder="Example: 20" required value="none"><br>
+          </div>
+         
+          <div class="input-box" id="result">
+            <br>
+              <p id="totalMarks">Marks obtained </p><br>
+              <p id="percentage">Percentage</p><br>
+              <p id="weight">Weightage </p><br>
+              <p> Developed By: <a href="https://blogspot.com/codexdebayan" >Codex Debayan</a></p>
+          </div>
+          <div class="input-box" id="chart" >
+            <div class="progress">
+              <div class="progress-text" data-progress="0" id="progress-text">
+                
+              </div>
+            <br>
+              <svg class="progress-circle" width="200px" height="200px" xmlns="http://www.w3.org/2000/svg">
+                <circle class="progress-circle-back"
+                      cx="80" cy="80" r="74"></circle>
+                  <circle class="progress-circle-prog"
+                          cx="80" cy="80" r="74"></circle>
+              </svg>
+          </div>
+          </div>
+          <div class="input-box">
+            <div class="button">
+              <input type="button" value="Calculate" onclick="calculateMarks()">
+            </div>
+          </div>
+          <div class="input-box">
+            <div class="button">
+              <input type="reset" value="Reset" id="refreshButton" onclick="window.location.reload()">
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    
+  </div>
+</body>
+</html>
