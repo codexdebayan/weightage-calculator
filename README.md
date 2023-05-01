@@ -1,4 +1,4 @@
-# weightage-calculator
+# Weightage-Calculator
 It basically includes various fumctions like 
 * Number of MCQ questions
 * Marks of each questions
